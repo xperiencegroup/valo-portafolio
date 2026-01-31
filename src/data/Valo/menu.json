@@ -7,11 +7,13 @@
       "children": [
         {
           "id": "conoce_valo",
-          "label": "Conoce Valo Developers"
+          "label": "Conoce Valo Developers",
+          "to": "conoce-valo-developers"
         },
         {
           "id": "equipo",
-          "label": "Equipo de trabajo"
+          "label": "Equipo de trabajo",
+          "to": "equipo-de-trabajo"
         }
       ]
     },
