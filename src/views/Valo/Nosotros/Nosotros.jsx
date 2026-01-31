@@ -2,13 +2,16 @@ import bgImage from "@/assets/images/home-screen.webp";
 import { IS_DEVELOPMENT } from "@/config";
 import DebbugComponent from "@/components/DebbugFooter";
 import BackButton from "@/components/Navigation/BackButton";
+import NosotrosSubMenu from "@/components/Menus/NosotrosSubMenu";
 
 export default function Nosotros() {
   return (
-    <div className="h-dvh w-dvw flex justify-center items-center overflow-hidden">
-      Nosotros
-      <br />
-      <BackButton />
+    <div className="h-dvh w-dvw flex items-end overflow-hidden">
+      <div className="flex flex-col self-end items-start w-fit p-5">
+        <NosotrosSubMenu />
+        <BackButton />
+      </div>
+
       {/* Background */}
       <div className="absolute -z-50">
         <img
