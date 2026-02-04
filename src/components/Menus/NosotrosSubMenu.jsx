@@ -16,7 +16,7 @@ export default function NosotrosSubMenu() {
         <p className="text-[21px] rounded-[40px] font-bold text-valo">
           Nosotros
         </p>
-        <CircleIndicatorIcon isActive />
+        <CircleIndicatorIcon isActive className="size-6" />
       </span>
 
       <nav className="flex flex-col">
