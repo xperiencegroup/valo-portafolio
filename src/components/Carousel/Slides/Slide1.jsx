@@ -3,6 +3,26 @@ import { EscudoIcon } from "@/assets/icons/conoce-valo-developers/EscudoIcon";
 import { IdeaIcon } from "@/assets/icons/conoce-valo-developers/IdeaIcon";
 import { ValoresIcon } from "@/assets/icons/conoce-valo-developers/ValoresIcon";
 
+const INFORMACION = [
+  {
+    id: "mision",
+    label: "Misión",
+    description:
+      "Desarrollar proyectos inmobiliarios estratégicos que sumen al crecimiento económico de su entorno, e impulsen el éxito de todos los involucrados.",
+  },
+  {
+    id: "vision",
+    label: "Visión",
+    description:
+      "Ser el aliado inmobiliario de nuestros clientes, socios, e inversionistas, generando oportunidades de negocio con un acompañamiento profesional y personalizado.",
+  },
+  {
+    id: "valores",
+    label: "Valores",
+    description: "Compromiso, Franqueza, Asertividad y Excelencia",
+  },
+];
+
 const VALORES = [
   {
     id: "compromiso",
@@ -30,36 +50,16 @@ export default function Slide1() {
   return (
     <div className="flex w-full h-full items-center justify-center gap-12.5">
       <div className="flex flex-col gap-7.5">
-        <div className="flex flex-col gap-1.25">
-          <h2 className="text-[42px] font-lumarc font-bold uppercase tracking-widest">
-            Misión
-          </h2>
-          <p className="max-w-267.5 text-3xl">
-            Desarrollar proyectos inmobiliarios estratégicos que sumen al
-            crecimiento económico de su entorno, e impulsen el éxito de todos
-            los involucrados.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-1.25">
-          <h2 className="text-[42px] font-lumarc font-bold uppercase tracking-widest">
-            Visión
-          </h2>
-          <p className="max-w-267.5 text-3xl">
-            Ser el aliado inmobiliario de nuestros clientes, socios, e
-            inversionistas, generando oportunidades de negocio con un
-            acompañamiento profesional y personalizado.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-1.25">
-          <h2 className="text-[42px] font-lumarc font-bold uppercase tracking-widest">
-            Valores
-          </h2>
-          <p className="max-w-267.5 text-3xl">
-            Compromiso, Franqueza, Asertividad y Excelencia
-          </p>
-        </div>
+        {INFORMACION.map((info) => {
+          return (
+            <div key={info.id} className="flex flex-col gap-1.25">
+              <h2 className="text-[42px] font-lumarc font-bold uppercase tracking-widest">
+                {info.label}
+              </h2>
+              <p className="max-w-267.5 text-3xl">{info.description}</p>
+            </div>
+          );
+        })}
       </div>
 
       {/* Íconos */}
