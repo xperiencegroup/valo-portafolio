@@ -1,0 +1,70 @@
+import React, { useEffect, useRef, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { CircleIndicatorIcon } from "@/assets/icons/CircleIndicatorIcon";
+import Slide1 from "./Slides/Slide1";
+
+export function ConoceValoCarousel() {
+  const autoplay = useRef(Autoplay({ delay: 10000, stopOnInteraction: true }));
+
+  const [scrollSnaps, setScrollSnaps] = useState([]);
+  const [selectedSnap, setSelectedSnap] = useState(0);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    autoplay.current,
+  ]);
+
+  const goTo = (index) => emblaApi?.scrollTo(index);
+
+  const setupSnaps = (api) => setScrollSnaps(api.scrollSnapList());
+
+  const setActiveSnap = (api) => setSelectedSnap(api.selectedScrollSnap());
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    autoplay.current.play();
+
+    setupSnaps(emblaApi);
+    setActiveSnap(emblaApi);
+
+    emblaApi.on("reInit", setupSnaps);
+    emblaApi.on("reInit", setActiveSnap);
+    emblaApi.on("select", setActiveSnap);
+  }, [emblaApi]);
+
+  return (
+    <div className="embla flex flex-col w-full h-full text-valo">
+      <div className="embla__viewport w-full h-full" ref={emblaRef}>
+        <div className="embla__container flex w-full h-full">
+          {/* Slide 1 */}
+          <div className="embla__slide flex-[0_0_100%]">
+            <Slide1 />
+          </div>
+
+          {/* Slide 2 */}
+          <div className="embla__slide flex-[0_0_100%]">Slide 2</div>
+
+          {/* Slide 3 */}
+          <div className="embla__slide flex-[0_0_100%]">Slide 3</div>
+        </div>
+      </div>
+
+      <div className="flex gap-2 justify-center">
+        {scrollSnaps.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goTo(index)}
+            className={"flex hover:cursor-pointer"}
+          >
+            {index === selectedSnap ? (
+              <CircleIndicatorIcon isActive className="size-10" />
+            ) : (
+              <span className="size-10 rounded-full border-[3px] border-valo" />
+            )}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
