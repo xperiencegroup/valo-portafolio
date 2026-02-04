@@ -5,6 +5,7 @@ import Contacto from "@/views/Valo/Contacto/Contacto";
 import Nosotros from "@/views/Valo/Nosotros/Nosotros";
 import Conocenos from "@/views/Valo/Nosotros/Conocenos";
 import NosotrosLayout from "@/views/Valo/Nosotros/NosotrosLayout";
+import EquipoDeTrabajo from "@/views/Valo/Nosotros/EquipoDeTrabajo";
 
 export default function Router() {
   return (
@@ -14,6 +15,7 @@ export default function Router() {
         <Route path="/nosotros" element={<NosotrosLayout />}>
           <Route index element={<Nosotros />} />
           <Route path="conoce-valo-developers" element={<Conocenos />} />
+          <Route path="equipo-de-trabajo" element={<EquipoDeTrabajo />} />
         </Route>
         <Route path="/proyectos" element={<Proyectos />} />
         <Route path="/contacto" element={<Contacto />} />
