@@ -3,6 +3,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { CircleIndicatorIcon } from "@/assets/icons/CircleIndicatorIcon";
 import Slide1 from "./Slides/Slide1";
+import Slide2 from "./Slides/Slide2";
+import Slide3 from "./Slides/Slide3";
 
 export function ConoceValoCarousel() {
   const autoplay = useRef(Autoplay({ delay: 10000, stopOnInteraction: true }));
@@ -35,7 +37,7 @@ export function ConoceValoCarousel() {
 
   return (
     <div className="embla flex flex-col w-full h-full text-valo">
-      <div className="embla__viewport w-full h-full" ref={emblaRef}>
+      <div className="embla__viewport w-full flex-1" ref={emblaRef}>
         <div className="embla__container flex w-full h-full">
           {/* Slide 1 */}
           <div className="embla__slide flex-[0_0_100%]">
@@ -43,10 +45,14 @@ export function ConoceValoCarousel() {
           </div>
 
           {/* Slide 2 */}
-          <div className="embla__slide flex-[0_0_100%]">Slide 2</div>
+          <div className="embla__slide flex-[0_0_100%]">
+            <Slide2 />
+          </div>
 
           {/* Slide 3 */}
-          <div className="embla__slide flex-[0_0_100%]">Slide 3</div>
+          <div className="embla__slide flex-[0_0_100%]">
+            <Slide3 />
+          </div>
         </div>
       </div>
 
