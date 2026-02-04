@@ -20,6 +20,7 @@ export default function Nosotros() {
           className="w-dvw h-dvh object-cover"
         />
       </div>
+
       {IS_DEVELOPMENT && <DebbugComponent />}
     </div>
   );
