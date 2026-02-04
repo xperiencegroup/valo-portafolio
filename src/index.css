@@ -10,6 +10,7 @@
 @theme {
   --color-valo: #00245c;
   --font-eurostile: "Eurostile Next";
+  --font-lumarc: "LuMarc";
 }
 
 * {
@@ -21,4 +22,19 @@ body {
   font-family:
     "Eurostile Next", system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: white;
+}
+
+/* Embla Carousel */
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }

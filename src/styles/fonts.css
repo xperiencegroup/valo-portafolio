@@ -1,3 +1,5 @@
+/* Eurostile Next */
+
 @font-face {
   font-family: "Eurostile Next";
   src: url("/src/assets/fonts/EurostileNext/EurostileNextLTProRegular.otf")
@@ -21,6 +23,28 @@
   src: url("/src/assets/fonts/EurostileNext/EurostileNextLTProBold.otf")
     format("opentype");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* LuMarc */
+
+@font-face {
+  font-family: "LuMarc";
+  src:
+    url("/src/assets/fonts/LuMarc/LuMarc W01 Roman.ttf") format("truetype"),
+    url("/src/assets/fonts/LuMarc/LuMarc W04 Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular / Roman */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LuMarc";
+  src:
+    url("/src/assets/fonts/LuMarc/LuMarc W01 Bold.ttf") format("truetype"),
+    url("/src/assets/fonts/LuMarc/LuMarc W04 Bold.ttf") format("truetype");
+  font-weight: 700; /* Bold */
   font-style: normal;
   font-display: swap;
 }
