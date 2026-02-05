@@ -22,7 +22,7 @@ export default function BackButton() {
       onClick={() => handleBack()}
       className="group flex justify-between items-center w-77.75 h-17.5 px-11.25 bg-valo hover:bg-white hover:cursor-pointer"
     >
-      <p className="text-[21px] font-semibold group-hover:text-valo group-hover:font-bold">
+      <p className="text-[21px] font-semibold text-white group-hover:text-valo group-hover:font-bold">
         Regresar
       </p>
 
