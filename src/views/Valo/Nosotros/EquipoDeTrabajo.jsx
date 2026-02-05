@@ -55,8 +55,7 @@ const TEAM = [
 export default function EquipoDeTrabajo() {
   return (
     <div className="w-dvw h-dvh p-5 flex flex-col gap-6">
-      <h1 className="text-valo text-5xl">VALO</h1>
-      <div className="flex flex-1 items-center justify-center">
+      <div className="flex flex-1 items-center justify-center pt-24">
         <div className="grid grid-cols-8 gap-x-15.75 gap-y-7.5">
           {TEAM.map((member, index) => (
             <div
