@@ -6,6 +6,8 @@ import Nosotros from "@/views/Valo/Nosotros/Nosotros";
 import Conocenos from "@/views/Valo/Nosotros/Conocenos";
 import NosotrosLayout from "@/views/Valo/Nosotros/NosotrosLayout";
 import EquipoDeTrabajo from "@/views/Valo/Nosotros/EquipoDeTrabajo";
+import ProyectosLayout from "@/views/Valo/Proyectos/ProyectosLayout";
+import NuevoLeon from "@/views/Valo/Proyectos/Ciudades/NuevoLeon";
 
 export default function Router() {
   return (
@@ -17,7 +19,10 @@ export default function Router() {
           <Route path="conoce-valo-developers" element={<Conocenos />} />
           <Route path="equipo-de-trabajo" element={<EquipoDeTrabajo />} />
         </Route>
-        <Route path="/proyectos" element={<Proyectos />} />
+        <Route path="/proyectos" element={<ProyectosLayout />}>
+          <Route index element={<Proyectos />} />
+          <Route path="nuevo-leon" element={<NuevoLeon />} />
+        </Route>
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
     </BrowserRouter>
