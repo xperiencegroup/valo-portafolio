@@ -1,5 +1,6 @@
 import { SendIcon } from "@/assets/icons/SendIcon";
 import BackButton from "@/components/Navigation/BackButton";
+import LogoValoMark from "@/assets/logos/logo-valo-mark";
 
 export default function Contacto() {
   const handleSubmit = (e) => {
@@ -12,6 +13,10 @@ export default function Contacto() {
 
   return (
     <div className="flex items-center justify-center w-dvw h-dvh bg-white text-valo">
+      <div className="absolute top-0 left-0 pt-13 pl-15">
+        <LogoValoMark className="text-valo" />
+      </div>
+
       {/* Content */}
       <div className="flex flex-col w-418.5 h-186.5 px-20 py-15">
         <form

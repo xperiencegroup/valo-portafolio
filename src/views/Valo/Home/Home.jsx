@@ -5,6 +5,7 @@ import bgImage from "@/assets/images/home-screen.webp";
 import MainMenu from "@/components/Menus/MainMenu";
 import PlayButton from "@/components/Buttons/PlayButton";
 import BackButton from "@/components/Navigation/BackButton";
+import LogoValoMark from "@/assets/logos/logo-valo-mark";
 
 export default function Home() {
   const { showSplashScreen } = useContext(AppContext);
@@ -14,13 +15,18 @@ export default function Home() {
       {showSplashScreen && <SplashScreen />}
 
       {!showSplashScreen && (
-        <div className="self-end flex items-end w-full justify-between p-5">
-          <div>
-            <MainMenu />
-            <BackButton />
+        <>
+          <div className="absolute top-0 left-0 pt-13 pl-15">
+            <LogoValoMark className="text-valo" />
           </div>
-          <PlayButton />
-        </div>
+          <div className="self-end flex items-end w-full justify-between p-5">
+            <div>
+              <MainMenu />
+              <BackButton />
+            </div>
+            <PlayButton />
+          </div>
+        </>
       )}
 
       {/* Background */}
