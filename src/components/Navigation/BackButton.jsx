@@ -7,11 +7,11 @@ import { useLocation } from "react-router";
 export default function BackButton({ to = "" }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const { setShowSplashScreen } = useContext(AppContext);
+  const { toggleSplashScreen } = useContext(AppContext);
 
   const handleBack = () => {
     if (pathname === "/") {
-      setShowSplashScreen(true);
+      toggleSplashScreen();
     } else {
       navigate(to);
     }
