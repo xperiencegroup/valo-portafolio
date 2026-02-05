@@ -1,10 +1,8 @@
 import { useContext } from "react";
 import { AppContext } from "@/context/AppContext";
-import { IS_DEVELOPMENT } from "@/config";
 import SplashScreen from "./SplashScreen";
 import bgImage from "@/assets/images/home-screen.webp";
 import MainMenu from "@/components/Menus/MainMenu";
-import DebbugComponent from "@/components/DebbugFooter";
 import PlayButton from "@/components/Buttons/PlayButton";
 import BackButton from "@/components/Navigation/BackButton";
 
@@ -33,8 +31,6 @@ export default function Home() {
           className="w-dvw h-dvh object-cover"
         />
       </div>
-
-      {IS_DEVELOPMENT && <DebbugComponent />}
     </div>
   );
 }
