@@ -117,7 +117,7 @@ export default function Contacto() {
 
       {/* Return button */}
       <div className="fixed bottom-0 left-0 p-5 z-30">
-        <BackButton />
+        <BackButton to="/" />
       </div>
     </div>
   );

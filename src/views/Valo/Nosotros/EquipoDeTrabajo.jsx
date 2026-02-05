@@ -87,7 +87,7 @@ export default function EquipoDeTrabajo() {
         </div>
       </div>
       <div className="relative">
-        <BackButton />
+        <BackButton to="/nosotros" />
       </div>
     </div>
   );

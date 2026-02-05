@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AppContext } from "@/context/AppContext";
 import { useLocation } from "react-router";
 
-export default function BackButton() {
+export default function BackButton({ to = "" }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { setShowSplashScreen } = useContext(AppContext);
@@ -13,7 +13,7 @@ export default function BackButton() {
     if (pathname === "/") {
       setShowSplashScreen(true);
     } else {
-      navigate(-1);
+      navigate(to);
     }
   };
 

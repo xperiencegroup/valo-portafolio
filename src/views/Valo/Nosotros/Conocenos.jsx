@@ -10,7 +10,7 @@ export default function Conocenos() {
         <ConoceValoCarousel />
       </div>
       <div className="relative">
-        <BackButton />
+        <BackButton to="/nosotros" />
       </div>
     </div>
   );
