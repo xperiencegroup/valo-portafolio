@@ -1,3 +1,3 @@
 export default function Contacto() {
-  return <div>Contacto</div>;
+  return <div className="w-dvw h-dvh bg-blue-800">Contacto</div>;
 }
