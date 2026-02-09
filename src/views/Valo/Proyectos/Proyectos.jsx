@@ -1,4 +1,4 @@
-import masterplanBg from "@/assets/images/proyectos/masterplan.jpg";
+import masterplanBg from "@/assets/images/proyectos/Masterplan.jpg";
 import { MapaMexico } from "@/assets/images/proyectos/MapaMexico";
 import BackButton from "@/components/Navigation/BackButton";
 
