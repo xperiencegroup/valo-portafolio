@@ -1,5 +1,6 @@
 import MapaMonterrey from "@/assets/images/proyectos/MapaMonterrey";
 import { MapFilterButtons } from "@/components/Buttons/MapFilterButtons";
+import MapView from "@/components/Mapbox/map";
 import BackButton from "@/components/Navigation/BackButton";
 
 export default function NuevoLeon() {
@@ -10,7 +11,8 @@ export default function NuevoLeon() {
 
       {/* Map and Markers */}
       <div className="absolute z-0 inset-0">
-        <MapaMonterrey />
+        {/* <MapaMonterrey /> Replaced by MapView with Mapbox*/}
+        <MapView />
       </div>
 
       {/* Return button */}
