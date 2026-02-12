@@ -29,7 +29,7 @@ export function AppContextProvider({ children }) {
 
   const [mapFilter, setMapFilter] = useState(null);
   const selectMapFilter = (value) => {
-    if (mapFilter === value) return;
+    if (mapFilter === value) return setMapFilter(null);
     setMapFilter(value);
   };
 
