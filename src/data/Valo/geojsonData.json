@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Feature",
+        "coordinates": [
+          -100.48847,
+          25.68812
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "landmarkId": "valo-santa-catarina",
+        "camera": {
+          "zoom": 17.38,
+          "pitch": 65,
+          "bearing": -25,
+          "duration": 4000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Feature",
+        "coordinates": [
+          -100.18548,
+          25.76183
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "landmarkId": "valo-apodaca",
+        "camera": {
+          "zoom": 17.38,
+          "pitch": 65,
+          "bearing": 25,
+          "duration": 4000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Feature",
+        "coordinates": [
+          -100.59657,
+          25.81223
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "landmarkId": "torreluna",
+        "camera": {
+          "zoom": 17.38,
+          "pitch": 65,
+          "bearing": 25,
+          "duration": 4000
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Feature",
+        "coordinates": [
+          -100.29864,
+          25.63584
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "landmarkId": "montevo",
+        "camera": {
+          "zoom": 17.38,
+          "pitch": 65,
+          "bearing": 25,
+          "duration": 4000
+        }
+      }
+    }
+  ]
+}
