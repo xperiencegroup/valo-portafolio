@@ -4,28 +4,29 @@ import { ResidencialVerticalIcon } from "@/assets/icons/proyectos/ResidencialVer
 import { UsosMixtosIcon } from "@/assets/icons/proyectos/UsosMixtosIcon";
 import { AppContext } from "@/context/AppContext";
 import { useContext } from "react";
+import { FILTERS_ID } from "@/const/FiltersId";
 
 const BUTTONS = [
   {
-    id: "industrial",
+    id: FILTERS_ID.INDUSTRIAL,
     label: "Industrial",
     abbreviation: "IN",
     icon: IndustrialIcon,
   },
   {
-    id: "residencial-vertical",
+    id: FILTERS_ID.RESIDENCIAL_VERTICAL,
     label: "Residencial Vertical",
     abbreviation: "RV",
     icon: ResidencialVerticalIcon,
   },
   {
-    id: "residencial-horizontal",
+    id: FILTERS_ID.RESIDENCIAL_HORIZONTAL,
     label: "Residencial Horizontal",
     abbreviation: "RH",
     icon: ResidencialHorizontalIcon,
   },
   {
-    id: "usos-mixtos",
+    id: FILTERS_ID.USOS_MIXTOS,
     label: "Usos Mixtos",
     abbreviation: "UM",
     icon: UsosMixtosIcon,
@@ -45,7 +46,7 @@ export const MapFilterButtons = () => {
                 // Active Button
                 <span
                   key={button.id}
-                  className="relative h-17.5 max-w-117.5 flex items-center gap-2.5 px-3.75 bg-white"
+                  className="relative h-17.5 max-w-117.5 flex items-center gap-2.5 px-3.75 bg-white hover:cursor-pointer"
                 >
                   <span className="flex shrink">
                     <Icon isActive />
