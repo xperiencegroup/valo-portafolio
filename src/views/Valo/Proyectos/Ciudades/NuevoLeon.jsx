@@ -1,6 +1,6 @@
 import MapaMonterrey from "@/assets/images/proyectos/MapaMonterrey";
 import { MapFilterButtons } from "@/components/Buttons/MapFilterButtons";
-import MapView from "@/components/Mapbox/map";
+import MapView from "@/components/Mapbox/Map.jsx";
 import BackButton from "@/components/Navigation/BackButton";
 
 export default function NuevoLeon() {
