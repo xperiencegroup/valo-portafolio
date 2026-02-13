@@ -116,15 +116,15 @@ export default function Map() {
               ? filteredLocations.includes(feature.properties.landmarkId)
               : true;
 
-            if (isVisible)
-              return (
-                <Marker
-                  key={feature.properties.id}
-                  map={map}
-                  feature={feature}
-                  handleMarkerClick={handleMarkerClick}
-                />
-              );
+            return (
+              <Marker
+                key={feature.properties.id}
+                map={map}
+                feature={feature}
+                handleMarkerClick={handleMarkerClick}
+                isVisible={isVisible}
+              />
+            );
           })}
       </div>
     </>

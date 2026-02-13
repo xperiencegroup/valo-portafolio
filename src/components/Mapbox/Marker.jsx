@@ -13,7 +13,7 @@ const LANDMARKS = {
   montevo: MontevoLandmark,
 };
 
-const Marker = ({ map, feature, handleMarkerClick }) => {
+const Marker = ({ map, feature, handleMarkerClick, isVisible }) => {
   const { geometry, properties } = feature;
 
   const markerRef = useRef(null);
@@ -37,7 +37,13 @@ const Marker = ({ map, feature, handleMarkerClick }) => {
       src={icon}
       alt={properties.name}
       onClick={() => handleMarkerClick(feature)}
-      className={`hover:cursor-pointer`}
+      className={`hover:cursor-pointer transition-all hover:scale-110 hover:drop-shadow-2xl hover:brightness-110 origin-bottom
+      ${
+        isVisible
+          ? "opacity-100 scale-100 pointer-events-auto animate-bounce-once"
+          : "opacity-0 scale-0 pointer-events-none"
+      }
+    `}
     />,
     container,
   );
