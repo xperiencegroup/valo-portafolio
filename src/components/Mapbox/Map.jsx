@@ -7,11 +7,13 @@ import { useContext } from "react";
 import { AppContext } from "@/context/AppContext";
 
 const ACCESS_TOKEN = import.meta.env.VITE_PUBLIC_MAPBOX_TOKEN;
-const INITIAL_POSITION = {
+const INITIAL_CONFIG = {
   center: [-100.32693, 25.68785],
   zoom: 10.9,
   pitch: 0,
   bearing: 0,
+  maxPitch: 65,
+  style: "mapbox://styles/emmsanchez/cmlkb6klk006e01sk40lig6he",
 };
 
 const CATEGORIES = {
@@ -28,11 +30,11 @@ export default function Map() {
   const { mapFilter } = useContext(AppContext);
   const filteredLocations = mapFilter ? CATEGORIES[mapFilter] : null;
 
-  const [_, setActiveFeature] = useState();
+  const [activeFeature, setActiveFeature] = useState();
 
   // For Debugging
-  const [center, setCenter] = useState(INITIAL_POSITION.center);
-  const [zoom, setZoom] = useState(INITIAL_POSITION.zoom);
+  const [center, setCenter] = useState(INITIAL_CONFIG.center);
+  const [zoom, setZoom] = useState(INITIAL_CONFIG.zoom);
 
   useEffect(() => {
     if (!ACCESS_TOKEN) return;
@@ -41,9 +43,11 @@ export default function Map() {
 
     const mapInstance = new mapboxgl.Map({
       container: mapContainerRef.current,
-      center: INITIAL_POSITION.center,
-      zoom: INITIAL_POSITION.zoom,
-      minZoom: INITIAL_POSITION.zoom,
+      style: INITIAL_CONFIG.style,
+      center: INITIAL_CONFIG.center,
+      zoom: INITIAL_CONFIG.zoom,
+      minZoom: INITIAL_CONFIG.zoom,
+      maxPitch: INITIAL_CONFIG.maxPitch,
     });
 
     mapInstance.on("load", () => {
@@ -67,7 +71,12 @@ export default function Map() {
   }, []);
 
   const handleMarkerClick = (feature) => {
-    setActiveFeature(feature.properties.id);
+    if (!feature) {
+      setActiveFeature(null);
+      return;
+    }
+
+    setActiveFeature(feature?.properties?.landmarkId);
 
     const { zoom, pitch, bearing, duration } = feature.properties.camera;
     map?.flyTo({
@@ -81,10 +90,10 @@ export default function Map() {
 
   const goToInitialPosition = () => {
     map?.flyTo({
-      center: INITIAL_POSITION.center,
-      zoom: INITIAL_POSITION.zoom,
-      pitch: INITIAL_POSITION.pitch,
-      bearing: INITIAL_POSITION.bearing,
+      center: INITIAL_CONFIG.center,
+      zoom: INITIAL_CONFIG.zoom,
+      pitch: INITIAL_CONFIG.pitch,
+      bearing: INITIAL_CONFIG.bearing,
     });
   };
 
@@ -123,6 +132,7 @@ export default function Map() {
                 feature={feature}
                 handleMarkerClick={handleMarkerClick}
                 isVisible={isVisible}
+                activeFeature={activeFeature}
               />
             );
           })}
