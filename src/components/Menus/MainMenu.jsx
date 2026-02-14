@@ -5,8 +5,8 @@ import data from "@/data/Valo/menu.json";
 export default function MainMenu() {
   const { menu } = data;
   return (
-    <div className="px-5 py-6.25 bg-valo">
-      <p className="flex justify-center items-center w-67.75 h-17 px-6.25 py-3.75 text-[32px] uppercase">
+    <div className="w-[clamp(220px,16.2vw,311px)] px-2 py-2.5 2xl:px-5 2xl:py-6.25 bg-valo">
+      <p className="flex justify-center items-center w-full max-w-67.75 2xl:h-17 py-1 2xl:px-6.25 2xl:py-3.75 text-title-button uppercase">
         Menú
       </p>
 
@@ -16,11 +16,11 @@ export default function MainMenu() {
             <Link
               key={section.id}
               to={section.to}
-              className="group flex items-center justify-between w-full h-17.5 px-6.25 text-[21px] font-semibold rounded-[40px] hover:bg-white hover:text-valo hover:font-bold hover:cursor-pointer"
+              className="group flex items-center justify-between w-full h-[clamp(45px,3.65vw,70px)] px-6.25 text-paragraph-button font-semibold rounded-[40px] hover:bg-white hover:text-valo hover:font-bold hover:cursor-pointer"
             >
               {section.label}
 
-              <span className="relative w-6 h-6">
+              <span className="relative size-[clamp(16px,1.25vw,24px)]">
                 {/* Inactive */}
                 <span className="absolute inset-0 group-hover:hidden">
                   <CircleIndicatorIcon isActive={false} />
