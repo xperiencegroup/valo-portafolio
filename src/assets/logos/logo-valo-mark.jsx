@@ -2,8 +2,6 @@ export default function LogoValoMark({ className = "" }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="142"
-      height="40"
       viewBox="0 0 142 40"
       fill="none"
       className={className}
