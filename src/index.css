@@ -12,6 +12,10 @@
   --font-eurostile: "Eurostile Next";
   --font-lumarc: "LuMarc";
 
+  /* Font zises */
+  --text-title-button: clamp(20px, 1.67vw, 32px);
+  --text-paragraph-button: clamp(14px, 1.09vw, 21px);
+
   /* Animación pop-in para markers */
   /* Bounce solo una vez al aparecer */
   --animate-bounce-once: bounce-once 0.4s ease;
