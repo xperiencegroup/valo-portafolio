@@ -13,7 +13,7 @@
   --font-lumarc: "LuMarc";
 
   /* Font zises */
-  --text-title-button: clamp(20px, 1.67vw, 32px);
+  --text-title-button: clamp(18px, 1.67vw, 32px);
   --text-paragraph-button: clamp(14px, 1.09vw, 21px);
 
   /* Animación pop-in para markers */

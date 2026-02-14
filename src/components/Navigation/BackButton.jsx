@@ -25,13 +25,13 @@ export default function BackButton({ to = "" }) {
   return (
     <button
       onClick={() => handleBack()}
-      className="group flex justify-between items-center w-[clamp(220px,16.2vw,311px)] h-17.5 px-[33px] 2xl:px-11.25 bg-valo hover:bg-white hover:cursor-pointer -translate-y-0.5"
+      className="group flex justify-between items-center w-[clamp(180px,16.2vw,311px)] h-[clamp(38px,3.65vw,70px)] px-[29px] 2xl:px-11.25 bg-valo hover:bg-white hover:cursor-pointer -translate-y-0.5"
     >
       <p className="text-paragraph-button font-semibold text-white group-hover:text-valo group-hover:font-bold">
         Regresar
       </p>
 
-      <span className="relative size-[clamp(20px,1.35vw,26px)]">
+      <span className="relative size-[clamp(16px,1.35vw,26px)]">
         {/* Inactive */}
         <span className="absolute inset-0 group-hover:hidden">
           <ReturnIcon isActive={false} />

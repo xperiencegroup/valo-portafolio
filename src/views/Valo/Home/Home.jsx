@@ -16,14 +16,14 @@ export default function Home() {
 
       {!showSplashScreen && (
         <>
-          <div className="absolute top-0 left-0 pt-13 pl-15">
-            <div className="relative w-[clamp(120px,7.34vw,141px)]">
+          <div className="absolute top-0 left-0 p-8 lg:pt-13 lg:pl-15">
+            <div className="relative w-[clamp(90px,7.34vw,141px)]">
               <span className="absolute inset-0">
                 <LogoValoMark className="text-valo" />
               </span>
             </div>
           </div>
-          <div className="self-end flex items-end w-full justify-between p-5">
+          <div className="self-end flex items-end w-full justify-between p-1 sm:p-2 lg:p-5">
             <div>
               <MainMenu />
               <BackButton />
