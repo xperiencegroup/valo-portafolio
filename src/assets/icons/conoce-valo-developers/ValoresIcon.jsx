@@ -1,7 +1,5 @@
 export const ValoresIcon = ({ className = "text-valo" }) => (
   <svg
-    width="78"
-    height="75"
     viewBox="0 0 78 75"
     fill="none"
     className={className}

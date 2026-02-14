@@ -1,7 +1,5 @@
 export const IdeaIcon = ({ className = "text-valo" }) => (
   <svg
-    width="84"
-    height="84"
     viewBox="0 0 84 84"
     fill="none"
     className={className}

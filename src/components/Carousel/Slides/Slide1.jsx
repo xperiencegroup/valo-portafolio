@@ -48,30 +48,36 @@ const VALORES = [
 
 export default function Slide1() {
   return (
-    <div className="flex w-full h-full items-center justify-center gap-12.5">
-      <div className="flex flex-col gap-7.5">
+    <div className="flex w-full h-full items-center justify-center gap-1 xl:gap-4 2xl:gap-12.5">
+      <div className="flex flex-col gap-[clamp(8px,1.56vw,30px)]">
         {INFORMACION.map((info) => {
           return (
-            <div key={info.id} className="flex flex-col gap-1.25">
-              <h2 className="text-[42px] font-lumarc font-bold uppercase tracking-widest">
+            <div key={info.id} className="flex flex-col xl:gap-1.25">
+              <h2 className="text-title font-lumarc font-bold uppercase tracking-widest">
                 {info.label}
               </h2>
-              <p className="max-w-267.5 text-3xl">{info.description}</p>
+              <p className="w-[clamp(200px,55.73vw,1070px)] text-paragraph max-xl:leading-none">
+                {info.description}
+              </p>
             </div>
           );
         })}
       </div>
 
       {/* Íconos */}
-      <div className="grid grid-cols-2 gap-7.5">
+      <div className="grid grid-cols-2 gap-[clamp(8px,1.56vw,30px)]">
         {VALORES.map((valor) => {
           return (
             <div
               key={valor.id}
-              className="size-60 flex flex-col justify-center items-center gap-5 p-5"
+              className="size-[clamp(110px,12.5vw,240px)] flex flex-col justify-center items-center gap-3 2xl:gap-5 p-2 2xl:p-5"
             >
-              {valor.icon}
-              <p className="text-[30px] font-lumarc uppercase">{valor.label}</p>
+              <span className="size-[clamp(40px,4.17vw,80px)]">
+                {valor.icon}
+              </span>
+              <p className="text-paragraph font-lumarc uppercase">
+                {valor.label}
+              </p>
             </div>
           );
         })}

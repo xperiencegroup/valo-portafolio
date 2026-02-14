@@ -1,10 +1,9 @@
-export const OficinaIcon = () => (
+export const OficinaIcon = ({ className = "" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="63"
-    height="55"
     viewBox="0 0 63 55"
     fill="none"
+    className={className}
   >
     <path
       d="M60.7445 29.3333C61.757 29.3333 62.5778 28.5125 62.5778 27.5C62.5778 26.4875 61.757 25.6667 60.7445 25.6667H1.83333C0.820811 25.6667 0 26.4875 0 27.5C0 28.5125 0.820811 29.3333 1.83333 29.3333H60.7445Z"

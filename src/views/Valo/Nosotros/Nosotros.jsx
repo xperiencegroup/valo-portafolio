@@ -5,7 +5,7 @@ import NosotrosSubMenu from "@/components/Menus/NosotrosSubMenu";
 export default function Nosotros() {
   return (
     <div className="h-dvh w-dvw flex items-end overflow-hidden">
-      <div className="flex flex-col self-end items-start w-fit p-1 sm:p-2 lg:p-5">
+      <div className="flex flex-col self-end items-start w-fit default-padding">
         <NosotrosSubMenu />
         <BackButton to="/" />
       </div>

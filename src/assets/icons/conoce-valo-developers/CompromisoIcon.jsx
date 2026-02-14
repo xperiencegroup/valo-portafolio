@@ -1,7 +1,5 @@
 export const CompromisoIcon = ({ className = "text-valo" }) => (
   <svg
-    width="71"
-    height="75"
     viewBox="0 0 71 75"
     fill="none"
     className={className}

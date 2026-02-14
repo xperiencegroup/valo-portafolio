@@ -36,8 +36,8 @@ export function ConoceValoCarousel() {
   }, [emblaApi]);
 
   return (
-    <div className="embla flex flex-col w-full h-full text-valo">
-      <div className="embla__viewport w-full flex-1" ref={emblaRef}>
+    <div className="embla flex flex-col justify-end w-full h-full text-valo">
+      <div className="embla__viewport w-full h-full flex" ref={emblaRef}>
         <div className="embla__container flex w-full h-full">
           {/* Slide 1 */}
           <div className="embla__slide flex-[0_0_100%]">
@@ -64,9 +64,12 @@ export function ConoceValoCarousel() {
             className={"flex hover:cursor-pointer"}
           >
             {index === selectedSnap ? (
-              <CircleIndicatorIcon isActive className="size-10" />
+              <CircleIndicatorIcon
+                isActive
+                className="size-[clamp(20px,2.08vw,40px)]"
+              />
             ) : (
-              <span className="size-10 rounded-full border-[3px] border-valo" />
+              <span className="size-[clamp(20px,2.08vw,40px)] rounded-full border-[3px] border-valo" />
             )}
           </button>
         ))}

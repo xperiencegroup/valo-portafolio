@@ -52,13 +52,16 @@ export default function Slide3() {
           return (
             <div
               key={especificacion.id}
-              className="flex flex-col items-center px-3.75 py-9.75 gap-3.75 text-white bg-valo"
+              className="flex flex-col items-center px-2 py-3 gap-2 md:px-2.5 md:py-4 md:gap-2.5 2xl:px-3.75 2xl:py-9.75 2xl:gap-3.75 text-white bg-valo"
             >
-              {especificacion.icon}
-              <p className="text-2xl text-center font-lumarc font-bold">
+              <span className="relative size-[clamp(25px,2.86vw,55px)]">
+                <span className="absolute inset-0">{especificacion.icon}</span>
+              </span>
+
+              <p className="text-info text-center font-lumarc font-bold">
                 {especificacion.number}
               </p>
-              <p className="text-[30px] text-center">{especificacion.label}</p>
+              <p className="text-label text-center">{especificacion.label}</p>
             </div>
           );
         })}

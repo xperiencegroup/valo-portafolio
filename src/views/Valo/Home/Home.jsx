@@ -23,7 +23,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="self-end flex items-end w-full justify-between p-1 sm:p-2 lg:p-5">
+          <div className="self-end flex items-end w-full justify-between default-padding">
             <div>
               <MainMenu />
               <BackButton />

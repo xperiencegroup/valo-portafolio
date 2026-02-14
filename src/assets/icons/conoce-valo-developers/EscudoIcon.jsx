@@ -1,7 +1,5 @@
 export const EscudoIcon = ({ className = "text-valo" }) => (
   <svg
-    width="69"
-    height="75"
     viewBox="0 0 69 75"
     fill="none"
     className={className}
