@@ -17,7 +17,11 @@ export default function Home() {
       {!showSplashScreen && (
         <>
           <div className="absolute top-0 left-0 pt-13 pl-15">
-            <LogoValoMark className="text-valo" />
+            <div className="relative w-[clamp(120px,7.34vw,141px)]">
+              <span className="absolute inset-0">
+                <LogoValoMark className="text-valo" />
+              </span>
+            </div>
           </div>
           <div className="self-end flex items-end w-full justify-between p-5">
             <div>
